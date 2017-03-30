@@ -4,44 +4,150 @@
 <head>
     <meta charset="UTF-8">
     <title>Birds Tracker</title>
-    <link rel="stylesheet" type="text/css" href="ext/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/mainStyle.css">
+
+    <!-- favicon -->
     <link rel="icon" type="image/png" href="img/favicon.png">
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" type="text/css" href="ext/bootstrap/css/bootstrap.min.css">
+
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="css/mainStyle.css">
+
 </head>
 
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
-                <img src="img/logo.png" class="navbar-brand">
+                <img src="img/logo.png" class="logo navbar-left">
+                <span class="logo-title navbar-left">
+                    Birds Tracker
+                </span>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Profile</a></li>
-                    <li><a href="#">Login</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">Andru <span class="caret"></span></a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <li><a href="#"><i class="glyphicon glyphicon-user"></i> Profile</a></li>
+                            <li><a href="#"><i class="glyphicon glyphicon-envelope"></i> Messages</a></li>
+                            <li><a href="#"><i class="glyphicon glyphicon-time"></i> History</a></li>
+                            <li><a href="#"><i class="glyphicon glyphicon-wrench"></i> Settings</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="login.html"><i class="glyphicon glyphicon-log-out"></i> Logout</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <img src="img/profile.jpg" class="profile-thumbnail">
+                    </li>
                 </ul>
                 <form class="navbar-form navbar-right">
-                    <input type="text" class="form-control" placeholder="Search...">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search...">
+                        <span class="input-group-addon" id="basic-addon2"><i class="glyphicon glyphicon-search"></i></span>
+                    </div>
                 </form>
             </div>
         </div>
     </nav>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-3 col-md-2 sidebar">
-                <ul class="nav nav-sidebar">
-                    <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
-                    <li><a href="#">News feed</a></li>
-                    <li><a href="#">Tracker</a></li>
-                </ul>
-                <ul class="nav nav-sidebar">
-                    <li><a href="">Profile</a></li>
-                    <li><a href="">Preferences</a></li>
-                    <li><a href="">Favourites</a></li>
+            <div class="col-xs-1 col-sm-3 col-md-2 sidebar">
+                <ul class="nav nav-sidebar hidden-xs">
+                    <li><a href="#"><i class="glyphicon glyphicon-list-alt"></i>&nbsp;&nbsp;&nbsp;News feed</a></li>
+                    <li><a href="#"><i class="glyphicon glyphicon-globe"></i>&nbsp;&nbsp;&nbsp;Tracker</a></li>
+                    <li><a href="#"><i class="glyphicon glyphicon-pushpin"></i>&nbsp;&nbsp;&nbsp;Report</a></li>
+                    <li><a href="#"><i class="glyphicon glyphicon-map-marker"></i>&nbsp;&nbsp;&nbsp;Events</a></li>
+                    <li><a href="#"><i class="glyphicon glyphicon-camera"></i>&nbsp;&nbsp;&nbsp;Gallery</a></li>
                 </ul>
             </div>
-            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <div class="col-xs-11 col-xs-offset-1 col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
                 <div class="container-fluid">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <article>
+                            <header>George a gaasit o pasare</header>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                        </article>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <article>
+                            <header>Dorel a gaasit o pasare</header>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                        </article>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <article>
+                            <header>George a gaasit o pasare</header>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                        </article>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <article>
+                            <header>Dorel a gaasit o pasare</header>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                        </article>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <article>
+                            <header>George a gaasit o pasare</header>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                        </article>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <article>
+                            <header>Dorel a gaasit o pasare</header>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                        </article>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <article>
+                            <header>George a gaasit o pasare</header>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                        </article>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <article>
+                            <header>Dorel a gaasit o pasare</header>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                        </article>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <article>
+                            <header>George a gaasit o pasare</header>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                        </article>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <article>
+                            <header>Dorel a gaasit o pasare</header>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                        </article>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <article>
+                            <header>George a gaasit o pasare</header>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                        </article>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <article>
+                            <header>Dorel a gaasit o pasare</header>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                        </article>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <article>
+                            <header>George a gaasit o pasare</header>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                        </article>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <article>
+                            <header>Dorel a gaasit o pasare</header>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                        </article>
+                    </div>
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                         <article>
                             <header>George a gaasit o pasare</header>
@@ -59,87 +165,11 @@
             </div>
         </div>
     </div>
-    <!--<div class="container">-->
-        <!--<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">-->
-            <!--<article>-->
-                <!--<header>George a gaasit o pasare</header>-->
-                <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>-->
-            <!--</article>-->
-        <!--</div>-->
-        <!--<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">-->
-            <!--<article>-->
-                <!--<header>George a gaasit o pasare</header>-->
-                <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>-->
-            <!--</article>-->
-        <!--</div>-->
-    <!--</div>-->
-    <!--<div class="container">-->
-        <!--<div class="row profile">-->
-            <!--<div class="col-md-3">-->
-                <!--<div class="profile-sidebar">-->
-                    <!--&lt;!&ndash; SIDEBAR USERPIC &ndash;&gt;-->
-                    <!--<div class="profile-userpic">-->
-                        <!--<img src="http://keenthemes.com/preview/metronic/theme/assets/admin/pages/media/profile/profile_user.jpg" class="img-responsive" alt="">-->
-                    <!--</div>-->
-                    <!--&lt;!&ndash; END SIDEBAR USERPIC &ndash;&gt;-->
-                    <!--&lt;!&ndash; SIDEBAR USER TITLE &ndash;&gt;-->
-                    <!--<div class="profile-usertitle">-->
-                        <!--<div class="profile-usertitle-name">-->
-                            <!--Marcus Doe-->
-                        <!--</div>-->
-                        <!--<div class="profile-usertitle-job">-->
-                            <!--Developer-->
-                        <!--</div>-->
-                    <!--</div>-->
-                    <!--&lt;!&ndash; END SIDEBAR USER TITLE &ndash;&gt;-->
-                    <!--&lt;!&ndash; SIDEBAR BUTTONS &ndash;&gt;-->
-                    <!--<div class="profile-userbuttons">-->
-                        <!--<button type="button" class="btn btn-success btn-sm">Follow</button>-->
-                        <!--<button type="button" class="btn btn-danger btn-sm">Message</button>-->
-                    <!--</div>-->
-                    <!--&lt;!&ndash; END SIDEBAR BUTTONS &ndash;&gt;-->
-                    <!--&lt;!&ndash; SIDEBAR MENU &ndash;&gt;-->
-                    <!--<div class="profile-usermenu">-->
-                        <!--<ul class="nav">-->
-                            <!--<li class="active">-->
-                                <!--<a href="#">-->
-                                    <!--<i class="glyphicon glyphicon-home"></i>-->
-                                    <!--Overview </a>-->
-                            <!--</li>-->
-                            <!--<li>-->
-                                <!--<a href="#">-->
-                                    <!--<i class="glyphicon glyphicon-user"></i>-->
-                                    <!--Account Settings </a>-->
-                            <!--</li>-->
-                            <!--<li>-->
-                                <!--<a href="#" target="_blank">-->
-                                    <!--<i class="glyphicon glyphicon-ok"></i>-->
-                                    <!--Tasks </a>-->
-                            <!--</li>-->
-                            <!--<li>-->
-                                <!--<a href="#">-->
-                                    <!--<i class="glyphicon glyphicon-flag"></i>-->
-                                    <!--Help </a>-->
-                            <!--</li>-->
-                        <!--</ul>-->
-                    <!--</div>-->
-                    <!--&lt;!&ndash; END MENU &ndash;&gt;-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<div class="col-md-9">-->
-                <!--<div class="profile-content">-->
-                    <!--Some user related content goes here...-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</div>-->
-    <!--<center>-->
-        <!--<strong>Powered by <a href="http://j.mp/metronictheme" target="_blank">KeenThemes</a></strong>-->
-    <!--</center>-->
-    <!--<br>-->
-<!--<br>-->
 
-    <!--<footer>ceva</footer>-->
+    <!-- jQuery -->
+    <script type="application/javascript" src="ext/jquery/jquery-3.2.0.min.js"></script>
+    <!-- bootstrap js -->
+    <script type="application/javascript" src="ext/bootstrap/js/bootstrap.min.js"></script>
 </body>
 
 </html>
