@@ -2078,7 +2078,7 @@ class ORM implements ArrayAccess {
         } else { // INSERT
             $query = $this->_build_insert();
         }
-
+var_dump($query, $values);die;
         $success = self::_execute($query, $values, $this->_connection_name);
         $caching_auto_clear_enabled = self::$_config[$this->_connection_name]['caching_auto_clear'];
         if($caching_auto_clear_enabled){

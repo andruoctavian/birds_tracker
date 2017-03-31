@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <title>Birds Tracker</title>
     <link rel="stylesheet" type="text/css" href="ext/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/mainStyle.css">
-    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="stylesheet" type="text/css" href="res/css/mainStyle.css">
+    <link rel="icon" type="image/png" href="res/img/favicon.png">
 </head>
 
 <body>
