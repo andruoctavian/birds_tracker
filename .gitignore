@@ -1,1 +1,6 @@
 .idea/
+composer.phar
+/vendor/
+templates_c
+/src/routes/templates_c/
+/db/

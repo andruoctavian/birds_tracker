@@ -1,58 +1,33 @@
-<!DOCTYPE html>
-<html>
+{extends file=ROOT_DIR|cat:"/tpl/framework.tpl"}
 
-<head>
-    <meta charset="UTF-8">
-    <title>Birds Tracker</title>
-
-    <!-- favicon -->
-    <link rel="icon" type="image/png" href="res/img/favicon.png">
-
-    <!-- bootstrap -->
-    <link rel="stylesheet" type="text/css" href="ext/bootstrap/css/bootstrap.min.css">
-    <!-- Google Fonts -->
-    <link rel="stylesheet" type="text/css" href="ext/google-fonts/google-fonts.css">
-
-    <!-- css -->
-    <link rel="stylesheet" type="text/css" href="res/css/mainStyle.css">
-
-</head>
-
-<body>
-    <nav class="navbar navbar-fixed-top">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <img src="res/img/logo.png" class="logo navbar-left">
-                <span class="logo-title navbar-left">
-                    Birds Tracker
-                </span>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">Andru <span class="caret"></span></a>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                            <li><a href="#"><i class="glyphicon glyphicon-user"></i> Profile</a></li>
-                            <li><a href="#"><i class="glyphicon glyphicon-envelope"></i> Messages</a></li>
-                            <li><a href="#"><i class="glyphicon glyphicon-time"></i> History</a></li>
-                            <li><a href="#"><i class="glyphicon glyphicon-wrench"></i> Settings</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="login.html"><i class="glyphicon glyphicon-log-out"></i> Logout</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <img src="res/img/profile.jpg" class="profile-thumbnail">
-                    </li>
+{block name="top-right-navbar"}
+    <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">Andru <span class="caret"></span></a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li><a href="#"><i class="glyphicon glyphicon-user"></i> Profile</a></li>
+                    <li><a href="#"><i class="glyphicon glyphicon-envelope"></i> Messages</a></li>
+                    <li><a href="#"><i class="glyphicon glyphicon-time"></i> History</a></li>
+                    <li><a href="#"><i class="glyphicon glyphicon-wrench"></i> Settings</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="/src/routes/logout.php"><i class="glyphicon glyphicon-log-out"></i> Logout</a></li>
                 </ul>
-                <form class="navbar-form navbar-right">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search...">
-                        <span class="input-group-addon" id="basic-addon2"><i class="glyphicon glyphicon-search"></i></span>
-                    </div>
-                </form>
+            </li>
+            <li>
+                <img src="/res/img/profile.jpg" class="profile-thumbnail">
+            </li>
+        </ul>
+        <form class="navbar-form navbar-right">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search...">
+                <span class="input-group-addon" id="basic-addon2"><i class="glyphicon glyphicon-search"></i></span>
             </div>
-        </div>
-    </nav>
+        </form>
+    </div>
+{/block}
+
+{block name="content"}
     <div class="container-fluid">
         <div class="row">
             <div class="col-xs-1 col-sm-3 col-md-2 sidebar">
@@ -167,11 +142,4 @@
             </div>
         </div>
     </div>
-
-    <!-- jQuery -->
-    <script type="application/javascript" src="ext/jquery/jquery-3.2.0.min.js"></script>
-    <!-- bootstrap -->
-    <script type="application/javascript" src="ext/bootstrap/js/bootstrap.min.js"></script>
-</body>
-
-</html>
+{/block}

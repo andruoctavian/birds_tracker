@@ -1,0 +1,19 @@
+{
+    "name": "andruoctavian/birds_tracker",
+    "description": "Birds watcher group - PW project",
+    "type": "project",
+    "authors": [
+        {
+            "name": "andruoctavian",
+            "email": "andru.mao94@gmail.com"
+        }
+    ],
+    "require": {
+        "components/jquery": "^3.2",
+        "components/bootstrap": "^3.3",
+        "j4mie/idiorm": "^1.5",
+        "smarty/smarty": "^3.1",
+        "js-cookie/js-cookie": "^2.1",
+        "j4mie/paris": "^1.5"
+    }
+}
