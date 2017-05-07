@@ -1,6 +1,6 @@
 <?php
 
-require_once "constants.php";
+require_once "base.php";
 require_once ROOT_DIR."/vendor/smarty/smarty/libs/Smarty.class.php";
 require_once ROOT_DIR."/src/entities/User.php";
 

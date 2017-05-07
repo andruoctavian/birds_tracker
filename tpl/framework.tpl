@@ -37,6 +37,11 @@
 <script type="application/javascript" src="/vendor/components/jquery/jquery.min.js"></script>
 <!-- bootstrap -->
 <script type="application/javascript" src="/vendor/components/bootstrap/js/bootstrap.min.js"></script>
+<!-- js -->
+{block name="scripts"}{/block}
+<!-- Google API Service -->
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGU_2xmTU8FVCthyScIOTGrSQ4ND9tFqk&callback=initMap" type="text/javascript"></script>
+
 </body>
 
 </html>

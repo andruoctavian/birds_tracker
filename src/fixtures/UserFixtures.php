@@ -2,7 +2,6 @@
 
 require_once "../entities/User.php";
 
-
 dbInit();
 dropTable(User::TABLE);
 execSQLQuery(User::CREATE_QUERY);

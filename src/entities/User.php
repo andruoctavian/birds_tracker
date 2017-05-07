@@ -1,6 +1,7 @@
 <?php
 
 require_once "db.php";
+require_once "Report.php";
 
 /**
  * Class User
@@ -15,10 +16,15 @@ class User extends Model
         "password VARCHAR(50)" .
         ")";
 
+    public function reports()
+    {
+        return $this->has_many('Report');
+    }
+
     /**
      * @return int
      */
-    public function getId(): int
+    public function getId() : int
     {
         return $this->get('id');
     }
@@ -26,7 +32,7 @@ class User extends Model
     /**
      * @return string
      */
-    public function getUsername(): string
+    public function getUsername() : string
     {
         return $this->get('username');
     }
@@ -35,7 +41,7 @@ class User extends Model
      * @param string $username
      * @return User
      */
-    public function setUsername(string $username): User
+    public function setUsername(string $username) : User
     {
         $this->set('username', $username);
 
@@ -45,7 +51,7 @@ class User extends Model
     /**
      * @return string
      */
-    public function getEmail(): string
+    public function getEmail() : string
     {
         return $this->get('email');
     }
@@ -54,7 +60,7 @@ class User extends Model
      * @param string $email
      * @return User
      */
-    public function setEmail(string $email): User
+    public function setEmail(string $email) : User
     {
         $this->set('email', $email);
 
@@ -64,7 +70,7 @@ class User extends Model
     /**
      * @return string
      */
-    public function getPassword(): string
+    public function getPassword() : string
     {
         return $this->get('password');
     }
@@ -73,11 +79,19 @@ class User extends Model
      * @param string $password
      * @return User
      */
-    public function setPassword(string $password): User
+    public function setPassword(string $password) : User
     {
         $this->set('password', $password);
 
         return $this;
+    }
+
+    /**
+     * @return Report[]
+     */
+    public function getReports() : array
+    {
+        return $this->reports()->findMany();
     }
 
     /**
@@ -105,9 +119,8 @@ class User extends Model
         $user
             ->setUsername($username)
             ->setEmail($email)
-            ->setPassword($user->generatePasswordHash($password));
-
-        $user->save();
+            ->setPassword($user->generatePasswordHash($password))
+            ->save();
 
         return $user;
     }
