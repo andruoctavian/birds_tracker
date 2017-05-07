@@ -18,8 +18,4 @@ $smarty->assign('username', getUsernameLoggedIn());
 $reports = Report::findLastReports();
 $smarty->assign('reports', $reports);
 
-/** @var Bird[] $birds */
-$birds = Bird::findAllBirds();
-$smarty->assign('birds', $birds);
-
 $smarty->display(ROOT_DIR."/tpl/home.tpl");

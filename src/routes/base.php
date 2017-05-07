@@ -22,3 +22,11 @@ function getUsernameLoggedIn()
 
     return null;
 }
+
+/**
+ * @return bool
+ */
+function isHttpPostRequest()
+{
+    return ($_SERVER['REQUEST_METHOD'] == 'POST');
+}

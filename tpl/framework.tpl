@@ -17,6 +17,8 @@
     <link rel="stylesheet" type="text/css" href="/res/css/mainStyle.css">
     {block name="stylesheets"}{/block}
 
+    <!-- jQuery -->
+    <script type="application/javascript" src="/vendor/components/jquery/jquery.min.js"></script>
 </head>
 
 <body>
@@ -33,14 +35,13 @@
 </nav>
 {block name="content"}{/block}
 
-<!-- jQuery -->
-<script type="application/javascript" src="/vendor/components/jquery/jquery.min.js"></script>
 <!-- bootstrap -->
 <script type="application/javascript" src="/vendor/components/bootstrap/js/bootstrap.min.js"></script>
+<!-- Google API Service -->
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGU_2xmTU8FVCthyScIOTGrSQ4ND9tFqk" type="text/javascript"></script>
+<script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
 <!-- js -->
 {block name="scripts"}{/block}
-<!-- Google API Service -->
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGU_2xmTU8FVCthyScIOTGrSQ4ND9tFqk&callback=initMap" type="text/javascript"></script>
 
 </body>
 

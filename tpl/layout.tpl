@@ -36,28 +36,16 @@
         <div class="row">
             <div class="col-xs-1 col-sm-3 col-md-2 sidebar">
                 <ul class="nav nav-sidebar hidden-xs">
-                    <li><a href="#" data-toggle="#news-feed" class="menu-link"><i class="glyphicon glyphicon-list-alt"></i>&nbsp;&nbsp;&nbsp;News feed</a></li>
-                    <li><a href="#" data-toggle="#tracker" class="menu-link"><i class="glyphicon glyphicon-globe"></i>&nbsp;&nbsp;&nbsp;Tracker</a></li>
-                    <li><a href="#" data-toggle="#report" class="menu-link"><i class="glyphicon glyphicon-pushpin"></i>&nbsp;&nbsp;&nbsp;Report</a></li>
-                    <li><a href="#" data-toggle="#events" class="menu-link"><i class="glyphicon glyphicon-map-marker"></i>&nbsp;&nbsp;&nbsp;Events</a></li>
-                    <li><a href="#" data-toggle="#gallery" class="menu-link"><i class="glyphicon glyphicon-camera"></i>&nbsp;&nbsp;&nbsp;Gallery</a></li>
+                    <li><a href="#" data-toggle="news-feed" class="menu-link"><i class="glyphicon glyphicon-list-alt"></i>&nbsp;&nbsp;&nbsp;News feed</a></li>
+                    <li><a href="#" data-toggle="tracker" class="menu-link"><i class="glyphicon glyphicon-globe"></i>&nbsp;&nbsp;&nbsp;Tracker</a></li>
+                    <li><a href="#" data-toggle="report" class="menu-link"><i class="glyphicon glyphicon-pushpin"></i>&nbsp;&nbsp;&nbsp;Report</a></li>
+                    <li><a href="#" data-toggle="events" class="menu-link"><i class="glyphicon glyphicon-map-marker"></i>&nbsp;&nbsp;&nbsp;Events</a></li>
+                    <li><a href="#" data-toggle="gallery" class="menu-link"><i class="glyphicon glyphicon-camera"></i>&nbsp;&nbsp;&nbsp;Gallery</a></li>
                 </ul>
             </div>
             <div class="col-xs-11 col-xs-offset-1 col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-                <div class="container-fluid tab" id="news-feed">
+                <div class="container-fluid tab" id="content">
                     {include file=ROOT_DIR|cat:"/tpl/news-feed.tpl"}
-                </div>
-                <div class="container-fluid tab" id="tracker">
-                    {include file=ROOT_DIR|cat:"/tpl/tracker.tpl"}
-                </div>
-                <div class="container-fluid tab" id="report">
-                    Report
-                </div>
-                <div class="container-fluid tab" id="events">
-                    Events
-                </div>
-                <div class="container-fluid tab" id="gallery">
-                    Gallery
                 </div>
                 <footer>ceva</footer>
             </div>
@@ -67,5 +55,4 @@
 
 {block name="scripts"}
     <script type="application/javascript" src="/res/js/sidebar.js"></script>
-    <script type="application/javascript" src="/res/js/tracker.js"></script>
 {/block}
