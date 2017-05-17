@@ -1,3 +1,3 @@
 <?php
 
-require_once 'src/routes/home.php';
+require_once '/src/routes/home.php';

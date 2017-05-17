@@ -15,4 +15,9 @@
         </div>
     </article>
 </div>
-<script type="application/javascript" src="/res/js/report.js"></script>
+<script type="application/javascript">
+    $(document).ready(function () {
+        initReportMap();
+        $('#content').undelegate('#submit-report', 'click').delegate('#submit-report', 'click', reportBird)
+    });
+</script>

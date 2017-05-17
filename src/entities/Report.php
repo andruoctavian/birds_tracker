@@ -16,6 +16,7 @@ class Report extends Model
         "bird_id INTEGER, " .
         "lat DECIMAL(5,2), " .
         "lng DECIMAL(5,2), " .
+        "date_time DATETIME, " .
         "FOREIGN KEY(user_id) REFERENCES user(id), " .
         "FOREIGN KEY(bird_id) REFERENCES bird(id)" .
         ")";
@@ -117,6 +118,26 @@ class Report extends Model
     }
 
     /**
+     * @return string
+     */
+    public function getDateTime() : string
+    {
+        return $this->get('date_time');
+    }
+
+    /**
+     * @param string $dateTime
+     *
+     * @return Report
+     */
+    public function setDateTime(string $dateTime) : Report
+    {
+        $this->set('date_time', $dateTime);
+
+        return $this;
+    }
+
+    /**
      * @param int $userId
      * @param int $birdId
      * @param float $lat
@@ -134,6 +155,7 @@ class Report extends Model
             ->setBirdId($birdId)
             ->setLat($lat)
             ->setLng($lng)
+            ->setDateTime(date("Y-m-d H:i:s"))
             ->save();
 
         return $report;

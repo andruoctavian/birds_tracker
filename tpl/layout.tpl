@@ -2,6 +2,8 @@
 
 {block name="stylesheets"}
     <link rel="stylesheet" type="text/css" href="/res/css/tracker.css">
+    <link rel="stylesheet" type="text/css" href="/res/css/chat.css">
+    <link rel="stylesheet" type="text/css" href="/res/css/gallery.css">
 {/block}
 
 {block name="top-right-navbar"}
@@ -19,7 +21,7 @@
                 </ul>
             </li>
             <li>
-                <img src="/res/img/profile.jpg" class="profile-thumbnail">
+                <img src="{$profilePic}" class="profile-thumbnail" alt="User picture">
             </li>
         </ul>
         <form class="navbar-form navbar-right">
@@ -36,18 +38,28 @@
         <div class="row">
             <div class="col-xs-1 col-sm-3 col-md-2 sidebar">
                 <ul class="nav nav-sidebar hidden-xs">
-                    <li><a href="#" data-toggle="news-feed" class="menu-link"><i class="glyphicon glyphicon-list-alt"></i>&nbsp;&nbsp;&nbsp;News feed</a></li>
+                    <li><a href="#" data-toggle="news-feed" class="menu-link active"><i class="glyphicon glyphicon-list-alt"></i>&nbsp;&nbsp;&nbsp;News feed</a></li>
                     <li><a href="#" data-toggle="tracker" class="menu-link"><i class="glyphicon glyphicon-globe"></i>&nbsp;&nbsp;&nbsp;Tracker</a></li>
-                    <li><a href="#" data-toggle="report" class="menu-link"><i class="glyphicon glyphicon-pushpin"></i>&nbsp;&nbsp;&nbsp;Report</a></li>
-                    <li><a href="#" data-toggle="events" class="menu-link"><i class="glyphicon glyphicon-map-marker"></i>&nbsp;&nbsp;&nbsp;Events</a></li>
+                    <li><a href="#" data-toggle="report" class="menu-link"><i class="glyphicon glyphicon-map-marker"></i>&nbsp;&nbsp;&nbsp;Report</a></li>
+                    <li><a href="#" data-toggle="chat" class="menu-link"><i class="glyphicon glyphicon-comment"></i>&nbsp;&nbsp;&nbsp;Chat</a></li>
                     <li><a href="#" data-toggle="gallery" class="menu-link"><i class="glyphicon glyphicon-camera"></i>&nbsp;&nbsp;&nbsp;Gallery</a></li>
+                </ul>
+                <ul class="nav nav-sidebar visible-xs">
+                    <li><a href="#" data-toggle="news-feed" class="left-20 menu-link active" title="News feed"><i class="glyphicon glyphicon-list-alt"></i></a></li>
+                    <li><a href="#" data-toggle="tracker" class="left-20 menu-link" title="Tracker"><i class="glyphicon glyphicon-globe"></i></a></li>
+                    <li><a href="#" data-toggle="report" class="left-20 menu-link" title="Report"><i class="glyphicon glyphicon-map-marker"></i></a></li>
+                    <li><a href="#" data-toggle="chat" class="left-20 menu-link" title="Chat"><i class="glyphicon glyphicon-comment"></i></a></li>
+                    <li><a href="#" data-toggle="gallery" class="left-20 menu-link" title="Gallery"><i class="glyphicon glyphicon-camera"></i></a></li>
                 </ul>
             </div>
             <div class="col-xs-11 col-xs-offset-1 col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
                 <div class="container-fluid tab" id="content">
                     {include file=ROOT_DIR|cat:"/tpl/news-feed.tpl"}
                 </div>
-                <footer>ceva</footer>
+                <footer>
+                    <div class="pull-left"><strong>Programare Web 2017<br>Facultatea de Automatica si Calculatoare</strong></div>
+                    <div class="pull-right"><strong>&copy; Andru-Octavian Mocanu</strong></div>
+                </footer>
             </div>
         </div>
     </div>
@@ -55,4 +67,8 @@
 
 {block name="scripts"}
     <script type="application/javascript" src="/res/js/sidebar.js"></script>
+    <script type="application/javascript" src="/res/js/tracker.js"></script>
+    <script type="application/javascript" src="/res/js/report.js"></script>
+    <script type="application/javascript" src="/res/js/chat.js"></script>
+    <script type="application/javascript" src="/res/js/gallery.js"></script>
 {/block}

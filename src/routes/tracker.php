@@ -21,6 +21,7 @@ if (isUserLoggedIn()) {
                 ),
                 'bird' => $report->getBird()->getName(),
                 'user' => $report->getUser()->getUsername(),
+                'date' => $report->getDateTime(),
             );
         }, $reports);
         echo json_encode($locations);

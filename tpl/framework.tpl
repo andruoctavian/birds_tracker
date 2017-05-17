@@ -25,7 +25,7 @@
 <nav class="navbar navbar-fixed-top">
     <div class="container-fluid">
         <div class="navbar-header">
-            <img src="/res/img/logo.png" class="logo navbar-left">
+            <img src="/res/img/logo.png" class="logo navbar-left" alt="logo">
             <span class="logo-title navbar-left">
                     Birds Tracker
                 </span>
@@ -34,6 +34,8 @@
     </div>
 </nav>
 {block name="content"}{/block}
+
+<div id="popup"></div>
 
 <!-- bootstrap -->
 <script type="application/javascript" src="/vendor/components/bootstrap/js/bootstrap.min.js"></script>

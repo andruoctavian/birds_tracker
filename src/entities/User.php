@@ -2,6 +2,8 @@
 
 require_once "db.php";
 require_once "Report.php";
+require_once "Message.php";
+require_once "Post.php";
 
 /**
  * Class User
@@ -19,6 +21,21 @@ class User extends Model
     public function reports()
     {
         return $this->has_many('Report');
+    }
+
+    public function messages()
+    {
+        return $this->has_many('Message');
+    }
+
+    public function posts()
+    {
+        return $this->has_many('Post');
+    }
+
+    public function comments()
+    {
+        return $this->has_many('Comment');
     }
 
     /**
@@ -148,5 +165,14 @@ class User extends Model
     public function checkPassword($password) : bool
     {
         return $this->generatePasswordHash($password) === $this->getPassword();
+    }
+
+    public function getProfilePictureLink() : string
+    {
+        if (file_exists(ROOT_DIR."/res/img/profiles/{$this->getUsername()}")) {
+            return "/res/img/profiles/{$this->getUsername()}";
+        } else {
+            return "/res/img/profiles/_default";
+        }
     }
 }

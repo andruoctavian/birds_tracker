@@ -1,0 +1,61 @@
+$color0: #FFFFFF;
+$color1: #2D728F;
+$color2:#3B8EA5;
+$color3: #F5EE9E;
+$color4: #F49E4C;
+$color5: #AB3428;
+
+.comment {
+  position: relative;
+  background-color: $color3;
+  border-radius: 4px;
+  color: black;
+  padding: 5px 10px 4px 10px;
+  width: auto;
+  max-width: 60%;
+  font-size: 18px;
+  display: inline;
+  left: 10px;
+  word-break: break-all;
+}
+.comment:before {
+  right: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-right-color: $color3;
+  border-width: 5px;
+  margin-top: -5px;
+}
+
+.comment-timestamp {
+  width: auto;
+  font-size: 12px;
+  color: white;
+  background-color: transparent;
+  word-break: keep-all;
+  display: inline;
+  margin-left: 15px;
+}
+
+.gallery-comments {
+  overflow: auto;
+  margin: 30px 0 10px 0;
+  max-height: 450px;
+}
+
+.comment-entry {
+  margin: 10px 0 10px 0;
+}
+
+#comment-post {
+  cursor: pointer;
+}
+
+.form-post * {
+  margin: 10px;
+}

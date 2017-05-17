@@ -12,7 +12,14 @@ session_start();
 if (!isUserLoggedIn()) {
     header("Location: /src/routes/login.php");
 }
-$smarty->assign('username', getUsernameLoggedIn());
+
+$username = getUsernameLoggedIn();
+/** @var User $user */
+$user = User::findUserByUsername($username);
+$profilePic = $user->getProfilePictureLink();
+
+$smarty->assign('username', $username);
+$smarty->assign('profilePic', $profilePic);
 
 /** @var Report[] $reports */
 $reports = Report::findLastReports();

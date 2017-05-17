@@ -4,4 +4,11 @@
         <div id="tracker-map" class="google-map"></div>
     </article>
 </div>
-<script type="application/javascript" src="/res/js/tracker.js"></script>
+<script type="application/javascript">
+    $(document).ready(function () {
+        $.post("/src/routes/tracker.php", function (data) {
+            reports = JSON.parse(data);
+            initTrackerMap();
+        });
+    });
+</script>
