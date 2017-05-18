@@ -43,6 +43,9 @@
                     <li><a href="#" data-toggle="report" class="menu-link"><i class="glyphicon glyphicon-map-marker"></i>&nbsp;&nbsp;&nbsp;Report</a></li>
                     <li><a href="#" data-toggle="chat" class="menu-link"><i class="glyphicon glyphicon-comment"></i>&nbsp;&nbsp;&nbsp;Chat</a></li>
                     <li><a href="#" data-toggle="gallery" class="menu-link"><i class="glyphicon glyphicon-camera"></i>&nbsp;&nbsp;&nbsp;Gallery</a></li>
+                    {if $admin == true}
+                        <li><a href="#" data-toggle="management" class="menu-link"><i class="glyphicon glyphicon-cog"></i>&nbsp;&nbsp;&nbsp;Management</a></li>
+                    {/if}
                 </ul>
                 <ul class="nav nav-sidebar visible-xs">
                     <li><a href="#" data-toggle="news-feed" class="left-20 menu-link active" title="News feed"><i class="glyphicon glyphicon-list-alt"></i></a></li>
@@ -50,6 +53,9 @@
                     <li><a href="#" data-toggle="report" class="left-20 menu-link" title="Report"><i class="glyphicon glyphicon-map-marker"></i></a></li>
                     <li><a href="#" data-toggle="chat" class="left-20 menu-link" title="Chat"><i class="glyphicon glyphicon-comment"></i></a></li>
                     <li><a href="#" data-toggle="gallery" class="left-20 menu-link" title="Gallery"><i class="glyphicon glyphicon-camera"></i></a></li>
+                    {if $admin == true}
+                        <li><a href="#" data-toggle="management" class="left-20 menu-link" title="Management"><i class="glyphicon glyphicon-cog"></i></a></li>
+                    {/if}
                 </ul>
             </div>
             <div class="col-xs-11 col-xs-offset-1 col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
@@ -71,4 +77,7 @@
     <script type="application/javascript" src="/res/js/report.js"></script>
     <script type="application/javascript" src="/res/js/chat.js"></script>
     <script type="application/javascript" src="/res/js/gallery.js"></script>
+    {if $admin == true}
+        <script type="application/javascript" src="/res/js/management.js"></script>
+    {/if}
 {/block}

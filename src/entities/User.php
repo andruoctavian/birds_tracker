@@ -15,8 +15,12 @@ class User extends Model
         "id INTEGER PRIMARY KEY AUTOINCREMENT, " .
         "username VARCHAR(50), " .
         "email VARCHAR(50), " .
-        "password VARCHAR(50)" .
+        "password VARCHAR(50), " .
+        "role INTEGER" .
         ")";
+
+    const ROLE_USER = 0;
+    const ROLE_ADMIN = 1;
 
     public function reports()
     {
@@ -104,6 +108,26 @@ class User extends Model
     }
 
     /**
+     * @return int
+     */
+    public function getRole() : int
+    {
+        return $this->get('role');
+    }
+
+    /**
+     * @param int $role
+     *
+     * @return User
+     */
+    public function setRole(int $role) : User
+    {
+        $this->set('role', $role);
+
+        return $this;
+    }
+
+    /**
      * @return Report[]
      */
     public function getReports() : array
@@ -125,10 +149,11 @@ class User extends Model
      * @param string $username
      * @param string $email
      * @param string $password
+     * @param int $role
      *
      * @return User
      */
-    public static function createUser(string $username, string $email, string $password) : User
+    public static function createUser(string $username, string $email, string $password, int $role = 0) : User
     {
         /** @var User $user */
         $user = Model::factory('User')->create();
@@ -137,6 +162,7 @@ class User extends Model
             ->setUsername($username)
             ->setEmail($email)
             ->setPassword($user->generatePasswordHash($password))
+            ->setRole($role)
             ->save();
 
         return $user;

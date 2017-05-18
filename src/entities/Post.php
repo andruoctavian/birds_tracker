@@ -183,4 +183,17 @@ class Post extends Model
 
         return $posts;
     }
+
+    /**
+     * @param int $id
+     *
+     * @return Post
+     */
+    public static function findPost(int $id) : Post
+    {
+        /** @var Post $post */
+        $post = Model::factory('Post')->findOne($id);
+
+        return $post;
+    }
 }

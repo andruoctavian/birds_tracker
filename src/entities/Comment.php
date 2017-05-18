@@ -157,4 +157,17 @@ class Comment extends Model
 
         return $comments;
     }
+
+    /**
+     * @param int $id
+     *
+     * @return Comment
+     */
+    public static function findComment(int $id) : Comment
+    {
+        /** @var Comment $comment */
+        $comment = Model::factory('Comment')->findOne($id);
+
+        return $comment;
+    }
 }

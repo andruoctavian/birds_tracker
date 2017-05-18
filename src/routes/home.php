@@ -20,6 +20,7 @@ $profilePic = $user->getProfilePictureLink();
 
 $smarty->assign('username', $username);
 $smarty->assign('profilePic', $profilePic);
+$smarty->assign('admin', $user->getRole() == User::ROLE_ADMIN);
 
 /** @var Report[] $reports */
 $reports = Report::findLastReports();
